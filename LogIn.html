@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pulsar Log In</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="dist/semantic.css">
+  <script type="text/javascript" src="dist/semantic.js"></script>
+</head>
+
+<body>
+  <!-- template for the modal component -->
+  <script type="text/x-template" id="modal-template">
+    <transition name="modal">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+            <div class="modal-body">
+              <div class="modal-sign-in">
+                  <form name="sign-in" class="sign-in-form">
+                    <img id="danger" src="http://www.myiconfinder.com/uploads/iconsets/256-256-c7eba42ce12ae9b26d5e8379b73dd86b-Refuse.png"/>
+                    <input id="username" v-model="username" type="text" placeholder="Email Address" required="required" class="uk-input uk-margin-small-right uk-form-width-medium"> 
+                    <input id="password" v-model="password" type="password" placeholder="Password" required="required" class="uk-input uk-margin-small-right uk-form-width-medium"> 
+                    <button class="uk-button uk-button-default uk-inverse" @click="login" id="mdBtn">Login</button>
+                    </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </script>
+  <div id="nav">
+      <div id="nav_wrapper">
+        <ul>
+          <li id="icon" class="modal-icon"><a href="#"><span>Home</span></a></li>
+          <li id="et"> <a href="#">Dashboard</a>
+          </li>
+          <li id="et"> <a href="#">Projects</a>
+          </li>
+          <li id="et"> <a href="#">Teams </a>
+          </li>
+          <li id="et"> <a href="#">Subscription</a>
+          </li>
+          <li id="et"> <a href="#">Settings</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <!-- Nav wrapper end -->
+  <!-- app -->
+  <div id="app">
+      <button id="show-modal" @click="show">Show Modal</button>
+      
+      <!-- use the modal component, pass in the prop -->
+      <modal v-if="showModal" @close="showModal = false"></modal>
+    </div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
