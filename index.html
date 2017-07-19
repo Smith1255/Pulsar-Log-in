@@ -3,13 +3,16 @@
 
 <head>
   <title>Pulsar Log In</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/theme.css" />
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https:////code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https:////code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https:////code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   <link rel="stylesheet" type="text/css" href="dist/semantic.css">
   <script type="text/javascript" src="dist/semantic.js"></script>
@@ -28,7 +31,7 @@
                     <img id="danger" src="http://www.myiconfinder.com/uploads/iconsets/256-256-c7eba42ce12ae9b26d5e8379b73dd86b-Refuse.png"/>
                     <input id="username" v-model="username" type="text" placeholder="Email Address" required="required" class="uk-input uk-margin-small-right uk-form-width-medium"> 
                     <input id="password" v-model="password" type="password" placeholder="Password" required="required" class="uk-input uk-margin-small-right uk-form-width-medium"> 
-                    <button class="uk-button uk-button-default uk-inverse" @click="login" id="mdBtn">Login</button>
+                    <button class="uk-button uk-button-default uk-inverse" @click="$emit('close')" id="mdBtn">Login</button>
                     </form>
               </div>
             </div>

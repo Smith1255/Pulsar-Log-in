@@ -5,8 +5,8 @@
   content: "";
   background: url("../assets/whiteRim.png");
   background-size: contain;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 20%;
+  height: 20%;
   background-repeat: no-repeat;
 }
 
@@ -41,7 +41,7 @@
   margin-left: %;
   text-align: center;
   clear: both;
-  height: 60px;
+  height: 10%;
   border-radius: 1px;
   float: left;
 }
@@ -167,22 +167,9 @@
 
 .modal-enter .modal-container,
 .modal-leave-active .modal-container {
-  -webkit-transform: translate(0px, -94%); /* Safari */
-   transform: translate(0px, -94%);
-}
-.modal-leave-active #modal-icon {
-  transform: translate(0,30%);
-  animation-duration: 5s;
-  animation-name: slideover;
-}
-
-@keyframes slideover {
-  0% {
-  }
-  30% {
-    transform: scale(.15, .15);
-    opacity: .7;
-  }
+  -webkit-transform: translate(0px, -95%); /* Safari */
+   transform: translate(0px, -95%);
+   opacity: .95;
 }
 .modal-leave-active input {
   display: none;
