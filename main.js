@@ -7,7 +7,6 @@ Vue.component('modal', {
    }),
    methods: {
       login() {
-        this.$emit('close')
         if (this.username=="badlog" || this.username == "") {
           if (this.username == "badlog") {
             $('#username').addClass('uk-form-danger')
@@ -20,11 +19,11 @@ Vue.component('modal', {
         } else {
           this.$emit('close')
           $('#icon').animate({
-            top: '7px',
+            top: '0px',
             left: '0px',
-            width: '2.6rem',
-            height: '2.6rem'
-          }, 3000, 'easeOutCubic', function() {
+            width: '3.2rem',
+            height: '3.2rem'
+          }, 2000, 'easeOutCubic', function() {
             $('#icon').switchClass("modal-icon", "nav-icon", 1, "linear")
             $('#icon').transition('stop all')
           })
