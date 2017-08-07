@@ -23,7 +23,7 @@ Vue.component('modal', {
             left: '0px',
             width: '3.2rem',
             height: '3.2rem'
-          }, 2000, 'easeOutCubic', function() {
+          }, 1650, 'easeOutCubic', function() {
             $('#icon').switchClass("modal-icon", "nav-icon", 1, "linear")
             $('#icon').transition('stop all')
           })
