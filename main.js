@@ -7,6 +7,7 @@ Vue.component('modal', {
    }),
    methods: {
       login() {
+        this.$emit('close')
         if (this.username=="badlog" || this.username == "") {
           if (this.username == "badlog") {
             $('#username').addClass('uk-form-danger')

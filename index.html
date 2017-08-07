@@ -27,11 +27,11 @@
           <div class="modal-container">
             <div class="modal-body">
               <div class="modal-sign-in">
-                  <form name="sign-in" class="sign-in-form">
+                  <form name="sign-in" class="sign-in-form" onSubmit="return false;">
                     <img id="danger" src="http://www.myiconfinder.com/uploads/iconsets/256-256-c7eba42ce12ae9b26d5e8379b73dd86b-Refuse.png"/>
                     <input id="username" v-model="username" type="text" placeholder="Email Address" required="required" class="uk-input uk-margin-small-right uk-form-width-medium"> 
                     <input id="password" v-model="password" type="password" placeholder="Password" required="required" class="uk-input uk-margin-small-right uk-form-width-medium"> 
-                    <button class="uk-button uk-button-default uk-inverse" @click="$emit('close')" id="mdBtn">Login</button>
+                    <button class="uk-button uk-button-default uk-inverse" @click="login" id="mdBtn">Login</button>
                     </form>
               </div>
             </div>
